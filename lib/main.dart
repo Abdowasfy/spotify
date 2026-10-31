@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/core/configs/theme/app_theme.dart';
-import 'package:spotify/presetation/splash/pages/splash_page.dart';
+import 'package:spotify/core/routing/router_generation.dart';
 
 void main() {
   runApp(const SpotifyApp());
@@ -11,11 +11,11 @@ class SpotifyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'Spotify ',
+      title: 'Spotify',
       theme: AppTheme.lightTheme,
-      home: const SplashPage(),
+      routerConfig: RouterGeneration.goRouter,
     );
   }
 }
