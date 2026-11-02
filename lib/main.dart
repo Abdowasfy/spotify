@@ -3,6 +3,7 @@ import 'package:spotify/core/configs/theme/app_theme.dart';
 import 'package:spotify/core/routing/router_generation.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const SpotifyApp());
 }
 
